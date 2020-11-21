@@ -29,7 +29,7 @@ function addNewBook(/* title, author, genre, read, series, leant */) {
   //Something to work on for tomorrow!!
 
   function postInfo() {
-    fetch(`http://localhost:3000/add`, {
+    fetch(`https://patricks-bookshelf.herokuapp.com/add`, {
       method: "post",
       body: JSON.stringify({
         title: inputTitle,
