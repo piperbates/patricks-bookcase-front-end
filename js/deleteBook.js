@@ -1,17 +1,11 @@
 function deleteBook() {
-    let url = window.location.href;
-let split = url.split("?")
-let id = split[1];
-
+  let url = window.location.href;
+  let split = url.split("?")
+  let id = split[1];
+  
   fetch(`https://patricks-bookshelf.herokuapp.com/delete/${id}`, {
     method: "delete",
     body: JSON.stringify({
-    //   title: inputTitle,
-    //   author: inputAuthor,
-    //   genre: inputGenre,
-    //   read: readValue,
-    //   series: inputSeries,
-    //   leant: inputLeant,
     }),
     headers: { "Content-Type": "application/json" },
   })
@@ -24,6 +18,10 @@ let id = split[1];
 
 deleteBookButton.addEventListener(
   "click", (() => {
-    deleteBook();
+    let confirmDelete = confirm(`Are you sure you want to delete this book?`)
+    if(confirmDelete){
+    deleteBook();} else {
+      return;
+    }
   })
 );

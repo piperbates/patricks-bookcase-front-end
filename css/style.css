@@ -4,7 +4,7 @@ table {
 }
 
 th {
-  background: rgb(128, 128, 128);
+  background: rgb(93, 154, 93);
   color: white;
 }
 
@@ -12,13 +12,22 @@ td {
   padding: 5px;
 }
 
-tr:nth-child(even) {
-  background: rgb(226, 226, 226);
+tr:nth-child(odd) {
+  background: rgb(237, 255, 237);
 }
 
 .hidden {
   display: none;
 }
+
+table a {
+  color: black;
+}
+table a:hover {
+  color: rgb(56, 100, 56);
+}
+
+
 
 @media only screen and (min-width: 601px) {
   table {

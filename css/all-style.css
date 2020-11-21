@@ -6,6 +6,24 @@ body {
   margin: auto;
 }
 
+#delete-book {
+    width: 150px;
+    margin: auto;
+    background-color: rgb(147, 233, 147);
+    color: rgb(6, 83, 6);
+    border: 1px solid black;
+
+}
+#delete-button-container{
+    
+    margin: auto;
+    text-align: center;
+}
+#delete-book:hover {
+    background-color: rgb(195, 240, 195);
+    color: rgb(108, 108, 108);
+}
+
 header,
 main,
 footer {
