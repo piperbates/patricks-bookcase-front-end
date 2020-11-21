@@ -3,6 +3,11 @@ table {
   border-collapse: collapse;
 }
 
+th {
+  background: rgb(128, 128, 128);
+  color: white;
+}
+
 td {
   padding: 5px;
 }
@@ -11,10 +16,17 @@ tr:nth-child(even) {
   background: rgb(226, 226, 226);
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 601px) {
   table {
   width: 90%;
   margin: auto;
+  }
+  th {
+  padding: 10px;
 
   }
 }
@@ -24,7 +36,12 @@ tr:nth-child(even) {
     font-size: 2.5vw;
     width: 100%;
   }
+  th {
+  padding: 5px;
+
+  }
   td {
     width: 10%;
   }
 }
+

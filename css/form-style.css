@@ -1,0 +1,52 @@
+.required:after
+{
+    color: red;
+    content: " *";
+}
+
+fieldset {
+ margin: 0px;
+  margin:auto;
+}
+.add-input {
+    height: 30px;
+    display: block;
+    width: 100%;
+}
+
+#read-field {
+    text-align: center;
+    margin: auto;
+}
+
+#read-field input {
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 601px) {
+    fieldset {
+  width: 70%;
+
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    fieldset {
+        width: 90%;
+    }
+  }
+/* 
+label {
+   
+}
+
+input {
+    width: 100%;
+    margin:auto;
+}
+
+
+
+fieldset label {
+}
+ */
