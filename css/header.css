@@ -1,31 +1,27 @@
-header img {
-  float: left;
+header {
+  width: 100%;
+  height: auto;
 }
 
-header {
-  height: 100px;
+header img {
+  width: 100px;
 }
 
 header ul {
   list-style-type: none;
-}
-
-header li {
-  padding-left: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 nav input {
-  padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
 }
+
 nav button {
   background-color: white;
   border: 1px solid black;
-  padding: 10px;
   border-radius: 10px;
-  width: 100px;
-  margin: 5px auto;
 }
 
 #logo:hover {
@@ -33,11 +29,9 @@ nav button {
 }
 
 nav a,
-#search-button, #delete-book {
+#search-button,
+#delete-book {
   text-decoration: none;
-  background-color: rgb(147, 233, 147);
-  padding: 10px;
-  border-radius: 20px;
   color: rgb(6, 83, 6);
 }
 
@@ -52,40 +46,96 @@ footer {
   color: grey;
 }
 
-@media only screen and (min-width: 601px) {
-  header img {
-    width: 100px;
+@media only screen and (min-width: 751px) {
+
+  #search-input {
+    width: 30%;
+    margin: 20px;
+  }
+  header {
+    height: 100px;
   }
 
   header li {
     display: inline;
+    margin: 10px;
   }
-  nav li:last-child {
-    float: right;
+
+  nav a:hover,
+  #search-button:hover {
+    background-color: rgb(195, 240, 195);
+    color: rgb(108, 108, 108);
   }
+
+  nav a,
+  #search-button,
+  #delete-book {
+    text-decoration: none;
+    background-color: rgb(147, 233, 147);
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(6, 83, 6);
+  }
+
+  nav button {
+    margin: 5px auto;
+  }
+
+  nav input {
+    padding: 10px;
+  }
+
+  header img {
+    float: left;
+  }
+
   footer {
     margin-top: 30px;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  header img {
-    width: 75px;
+@media only screen and (max-width: 750px) {
+  .hidden {
+    display: none;
   }
 
-  header li {
-    display: block;
-    margin-top: 30px;
+  nav input {
+    padding: 5px;
   }
+
+  header img {
+    display: none;
+  }
+
+  nav {
+    background-color: rgb(195, 240, 195);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  nav a {
+    padding: 3px;
+  }
+
+  nav li {
+    padding: 5px;
+    border-bottom: 1px solid green;
+  }
+
   nav li:last-child {
-    float: right;
-    width: 100px;
-    position: absolute;
-    top: 10px;
-    right: 100px;
-    padding: 0px;
-    margin: 0px;
+    border: 0px;
   }
+
+  nav button {
+    padding: 5px;
+    width: 60px;
+    margin: 3px auto;
+  }
+
+  #search-button {
+    background-color: rgb(147, 233, 147);
+  }
+
   footer {
     font-size: 2vw;
     margin-top: 20px;

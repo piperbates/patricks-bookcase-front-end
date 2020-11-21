@@ -1,0 +1,15 @@
+.toggle-span {
+background-color: rgb(56, 56, 56);
+width: 25px;
+height: 3px;
+border-radius: 100px;
+margin-bottom: 5px;
+position: relative;
+display: block;
+}
+
+@media only screen and (min-width: 751px) {
+    #toggle {
+      display: none;
+    }
+}
