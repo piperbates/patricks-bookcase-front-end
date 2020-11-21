@@ -11,6 +11,9 @@ Current functionaily of Patricks Bookshelf:
 * Delee individual book
 * View book on its individual page
 
+Current WIPs:
+* Search function by title - Currently only displays in the console
+
 Future plans:
 * Authentication so only Patrick can add or delete books (Priority)
 * Search function, lets you search by title, author, series, read / unread, or whether you've leant it out.
