@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/all-style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <title></title>
 </head>
 <body>
     <div id="container">
-        <header>
-          <ul>
-            <li>
-              <a href="#"><img src="" alt="logo" id="logo" /></a>
-            </li>
-            <li>
-              <nav>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li>
-                    <input type="text" id="search-input" placeholder="search" />
-                    <button id="search-button">Search</button>
-                  </li>
-                </ul>
-              </nav>
-            </li>
-          </ul>
-        </header>
+      <header>
+        <ul>
+          <li>
+            <a href="index2.html"><img src="public/images/logo.png" alt="logo" id="logo" /></a>
+          </li>
+          <li>
+            <nav>
+              <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="add.html">Add new book</a></li>
+                <li>
+                  <input type="text" id="search-input" placeholder="search" />
+                  <button id="search-button">Search</button>
+                </li>
+              </ul>
+            </nav>
+          </li>
+        </ul>
+      </header>
         <main>
           <table id="book-by-id">
             <tr>
@@ -38,6 +40,7 @@
               <th>Leant</th>
             </tr>
           </table>
+          <button id="delete-book">Delete book</button>
         </main>
         <footer>Patricks Library</footer>
       </div>
@@ -45,5 +48,6 @@
     <script src="./js/getData.js"></script>
     <script src="./js/displayBookById.js"></script>
     <script src="./js/getDom.js"></script>
+    <script src="./js/deleteBook.js"></script>
 </body>
 </html>

@@ -1,32 +1,44 @@
-function addNewBook(/* title, author, genre, read, series, leant */) {
-  let inputTitle = document.getElementById("title").value;
-  let inputAuthor = document.getElementById("author").value;
-  let inputGenre = document.getElementById("genre").value;
-  let inputRead = document.getElementById("read").value;
-  let inputSeries = document.getElementById("series").value;
-  let inputLeant = document.getElementById("leant").value;
-  console.log(
-    inputTitle,
-    inputAuthor,
-    inputGenre,
-    inputRead,
-    inputSeries,
-    inputLeant
-  );
+let title = document.getElementById("title");
+let author = document.getElementById("author");
+let genre = document.getElementById("genre");
+let series = document.getElementById("series");
+let leant = document.getElementById("leant");
 
-  // let newBook = {
-  //     title: inputTitle,
-  //     author: inputAuthor,
-  //     genre: inputGenre,
-  //     read: inputRead,
-  //     series: inputSeries,
-  //     leant: inputLeant
-  // }
+function addNewBook() {
+    
+  inputTitle = title.value;
+  inputAuthor = author.value;
+  inputGenre = genre.value;
+  inputRead = document.getElementById("read");
+  inputSeries = series.value;
+  inputLeant = leant.value;
+  readValue = false;
 
-  //Something about this fetch request is not right and I'm not sure why :(
-  //The post request works fine on Postman, so I know my backend is working okay
-  //Line 10 console logs the correct information, so I don't understand how to add that to the fetch request below.
-  //Something to work on for tomorrow!!
+
+
+  if(inputTitle=== "" || inputAuthor === "" || inputGenre === ""){
+      if(inputTitle=== ""){
+    changeFormColour(title)}
+    if(inputAuthor === ""){
+    changeFormColour(author)}
+    if(inputGenre === ""){
+    changeFormColour(genre)}
+    return;
+}
+if(inputTitle && inputAuthor && inputGenre){
+    title.classList.remove("form-required");
+    author.classList.remove("form-required");
+    genre.classList.remove("form-required");
+
+  function checkRead() {
+    if (inputRead.checked === true) {
+      readValue = true;
+    } else {
+      readValue = false;
+    }
+  }
+
+  checkRead();
 
   function postInfo() {
     fetch(`https://patricks-bookshelf.herokuapp.com/add`, {
@@ -35,22 +47,29 @@ function addNewBook(/* title, author, genre, read, series, leant */) {
         title: inputTitle,
         author: inputAuthor,
         genre: inputGenre,
-        read: inputRead,
+        read: readValue,
         series: inputSeries,
         leant: inputLeant,
       }),
       headers: { "Content-Type": "application/json" },
-      //Validation: ContentType
     })
-      .then((res) => res.json()) //res.json() is an async function
-      .then((data) => console.log(data)) //In the browser
-      .catch((error) => console.log(error, "my error")); //uncaught promise rejection. The promise throws and error and I need to catch otherwise it will be thrown into the ether
-    };
-  
+      .then((res) => res.json())
+      .then((data) => console.log(data)) 
+      .catch((error) => console.log(error, "my error")); 
+  }
 
   postInfo();
-
 }
-      submitNewBookButton.addEventListener("click", () => {
-        addNewBook(/* inputTitle, inputAuthor, inputGenre, inputRead, inputSeries, inputLeant */);
-      });
+}
+
+submitNewBookButton.addEventListener("click", (e) => {
+ 
+    e.preventDefault();
+    addNewBook();
+});
+
+submitNewBookButton.addEventListener("keyup", function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });

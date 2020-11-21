@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/all-style.css" />
     <link rel="stylesheet" href="./css/form-style.css" />
+    <link rel="stylesheet" href="./css/header.css">
     <title>Add</title>
   </head>
   <body>
@@ -13,12 +14,13 @@
       <header>
         <ul>
           <li>
-            <a href="#"><img src="" alt="logo" id="logo" /></a>
+            <a href="index2.html"><img src="public/images/logo.png" alt="logo" id="logo" /></a>
           </li>
           <li>
             <nav>
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="add.html">Add new book</a></li>
                 <li>
                   <input type="text" id="search-input" placeholder="search" />
                   <button id="search-button">Search</button>
@@ -29,6 +31,7 @@
         </ul>
       </header>
       <main>
+        <form id="add-book-form">
         <fieldset>
           <legend>Add new book</legend>
           <p>
@@ -73,6 +76,7 @@
               type="checkbox"
               name="read"
               id="read"
+              value="Read"
             />
           </p>
           <p>
@@ -97,6 +101,7 @@
           </p>
           <button id="submit-new-book">Submit New Book</button>
         </fieldset>
+      </form>
       </main>
       <footer>Patricks Library</footer>
     </div>

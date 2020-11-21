@@ -2,6 +2,8 @@ async function displayData() {
   let library = await getData();
   let num;
   library.map((i) => {
+    // console.log(i.id)
+    // console.log(library[i])
     num = Object.keys(i);
     let tr = document.createElement("tr");
     num.map((x) => {
@@ -11,6 +13,7 @@ async function displayData() {
           let a = document.createElement("a");
           
           let id = i.id
+          // console.log(`book.html?${id}`)
           
           a.setAttribute("href", `book.html?${id}`);
           a.innerText = i.title;

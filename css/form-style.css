@@ -4,10 +4,12 @@
     content: " *";
 }
 
-fieldset {
- margin: 0px;
-  margin:auto;
+#add-book-form {
+  width: 100%;
 }
+
+
+
 .add-input {
     height: 30px;
     display: block;
@@ -23,18 +25,12 @@ fieldset {
     border-radius: 50%;
 }
 
-@media only screen and (min-width: 601px) {
-    fieldset {
-  width: 70%;
+.form-required {
+  border: 3px solid red !important;
+}
 
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    fieldset {
-        width: 90%;
-    }
-  }
+
+
 /* 
 label {
    
