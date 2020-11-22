@@ -1,5 +1,7 @@
 async function displayData() {
   let library = await getData();
+  libraryLength = library.length;
+  libraryLengthDisplay.innerText = "Books added: " + libraryLength;
   let num;
   library.map((i) => {
     // console.log(i.id)

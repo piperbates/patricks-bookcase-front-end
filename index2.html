@@ -4,41 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/all-style.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/toggle.css">
+    <link rel="stylesheet" href="./css/all-style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
+    <link rel="stylesheet" href="./css/search.css" />
     <title>Hello</title>
   </head>
   <body>
+
     <div id="container">
       <header>
-        <div id="toggle">
-          <span class="toggle-span"></span>
-          <span class="toggle-span"></span>
-          <span class="toggle-span"></span>
+        <div id="search-container">
+
+          <div id="toggle" class="inline">
+            <span class="toggle-span"></span>
+            <span class="toggle-span"></span>
+            <span class="toggle-span"></span>
+          </div>
+          
+          <form id="search-form" class="inline">
+            <input type="text" id="search-input" placeholder="search" />
+            <button id="search-button">Search</button>
+          </form>
+
+          <div id="library-length" class="inline"></div>
+          
         </div>
         <ul>
           <li>
-            <a href="index2.html"><img src="public/images/logo.png" alt="logo" id="logo" /></a>
+            <a href="index2.html"
+              ><img src="public/images/logo.png" alt="logo" id="logo" 
+            /></a>
           </li>
-          
-          <li>
-           
 
+          <li>
             <nav>
               <ul>
                 <li><a href="index2.html">Home</a></li>
                 <li><a href="add.html">Add new book</a></li>
-                <li>
-                  <form id="search-form">
-                  <input type="text" id="search-input" placeholder="search" />
-                  <button id="search-button">Search</button>
-                </form>
-                </li>
+            
               </ul>
             </nav>
           </li>
         </ul>
+       
       </header>
       <main>
         <table id="library">

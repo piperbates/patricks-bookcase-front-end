@@ -12,6 +12,9 @@ function deleteBook() {
     .then((res) => res.json())
     .then((data) => console.log(data))
     .catch((error) => console.log(error, "my error"));
+
+    
+
 }
 
 
