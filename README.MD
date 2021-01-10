@@ -1,24 +1,70 @@
-*** Patricks Bookshelf ***
+# Getting Started with Create React App
 
-A full stack application build by Piper Bates in order to organise their partner Patricks extensive book collection. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-*** PLAN ***
+## Available Scripts
 
-The first goal was just to create a database with a basic front end that displayed books in a table, and a function to add and remove books from the library. I created a RESTful API with postgresql and heroku and filled in some dummy data to create the add and delete functions.
+In the project directory, you can run:
 
-Current functionaily of Patricks Bookshelf:
-* Add new book
-* Delee individual book
-* View book on its individual page
+### `npm start`
 
-Current WIPs:
-* Search function by title - Currently only displays in the console
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Future plans:
-* Authentication so only Patrick can add or delete books (Priority)
-* Search function, lets you search by title, author, series, read / unread, or whether you've leant it out.
-* Edit function, lets you edit books so if you've read it, or leant it out / got it returned, you can update it, or perhaps correct the spelling.
-    * Following on from edit function - have a simple front end toggle feature that changes whether the book has been read.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-* A second table with author information so you can look at all books by a particular author
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

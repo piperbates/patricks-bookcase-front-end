@@ -1,0 +1,7 @@
+#full-library-table tr:nth-child(odd){
+    background: rgb(213, 235, 201);
+}
+
+h1 {
+    padding: 0px; margin: 0px;
+}
