@@ -4,6 +4,7 @@ import Library from "../Library";
 import { Route, Switch, useLocation } from "react-router-dom";
 import AddBook from "../AddBook";
 import BookById from "../BookById";
+import Footer from "../Footer"
 
 function Authorized({ user }) {
   const ref = useLocation().pathname;
@@ -61,9 +62,7 @@ function Authorized({ user }) {
          </Route> */}
         </Switch>
       </main>
-      <footer>
-        Created by Piper Bates. <a href="http://www.github.com/piperbates">View on github</a>.
-      </footer>
+     <Footer />
     </div>
   );
 }
