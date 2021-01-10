@@ -27,3 +27,13 @@ main {
 .red {
   color: red
 }
+
+footer {
+  text-align: center;
+  padding: 5px;
+  color: lightgray;
+}
+
+footer a {
+  color:rgb(163, 189, 228)
+}

@@ -61,6 +61,9 @@ function Authorized({ user }) {
          </Route> */}
         </Switch>
       </main>
+      <footer>
+        Created by Piper Bates. <a href="http://www.github.com/piperbates">View on github</a>.
+      </footer>
     </div>
   );
 }
