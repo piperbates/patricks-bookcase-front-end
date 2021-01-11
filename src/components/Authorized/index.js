@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import HeaderBar from "../HeaderBar";
 import Library from "../Library";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import AddBook from "../AddBook";
 import BookById from "../BookById";
 import Footer from "../Footer";
+import NotFoundPage from "../NotFoundPage"
 import { backendUrl } from "../../constants";
 
 function Authorized({ user }) {
@@ -58,7 +59,11 @@ function Authorized({ user }) {
               nickname={user.nickname}
             />
           </Route>
+                    
+
+
           <Route path="/add-book">
+
             <AddBook />
           </Route>
           <Route path="/book/:id">
@@ -68,6 +73,8 @@ function Authorized({ user }) {
            
            <SearchPage />
          </Route> */}
+         <Route path="/404" component={NotFoundPage} />
+                    <Redirect to="/404" />
         </Switch>
       </main>
       <Footer />
