@@ -12,21 +12,26 @@ const { Search } = Input;
 
 // Need to now get searchValue 
 
-export default function HeaderBar({ nickname, bookCount }) {
-  const [searchValue, setSearchValue] = useState("");
+export default function HeaderBar({ nickname, bookCount, changeSearchText }) {
+  // const [searchValue, setSearchValue] = useState("");
 
   
   async function search(searchTerm){
     // let searchQuery = searchInput.value;
     // console.log(searchQuery)
-    let res = await fetch(`https://patricks-bookshelf.herokuapp.com/search/${searchTerm}`)
-    let data = await res.json();
-    setSearchValue(data.payload)
+    // let res = await fetch(`https://patricks-bookshelf.herokuapp.com/search/${searchTerm}`)
+    // let data = await res.json();
+    if(searchTerm){
+      changeSearchText("search/" + searchTerm)
+    } else {
+      changeSearchText("")
+    }
+    
     // window.location.href = "/?search/" + searchValue;
     }
 
     
-  console.log(searchValue)
+  // console.log(searchValue)
   return (
     <header>
       <div className="header-wrapper" id="header-items-left">
@@ -46,6 +51,7 @@ export default function HeaderBar({ nickname, bookCount }) {
         <Search
           placeholder="input search text"
           onSearch={(value)=>{search(value)}}
+          allowClear
           id="search"
         />
         </div>
