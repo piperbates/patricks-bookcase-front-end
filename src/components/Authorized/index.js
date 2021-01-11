@@ -4,7 +4,8 @@ import Library from "../Library";
 import { Route, Switch, useLocation } from "react-router-dom";
 import AddBook from "../AddBook";
 import BookById from "../BookById";
-import Footer from "../Footer"
+import Footer from "../Footer";
+import { backendUrl } from "../../constants";
 
 function Authorized({ user }) {
   const ref = useLocation().pathname;
@@ -14,7 +15,9 @@ function Authorized({ user }) {
   const [searchState, setSearchState] = useState("");
   useEffect(() => {
     async function getData() {
-      let res = await fetch(`http://localhost:5000/${searchState}`);
+      let res = await fetch(
+        `${backendUrl}/${searchState}`
+      );
       let data = await res.json();
       setLibrary(data.payload);
     }
@@ -25,7 +28,7 @@ function Authorized({ user }) {
   //   // Gets the specific book that was selected from the database
   async function getBookId(bookId) {
     let res = await fetch(
-      `https://patricks-bookshelf.herokuapp.com/book/${bookId}`
+      `${backendUrl}/book/${bookId}`
     );
     let data = await res.json();
     setBook(data.payload);
@@ -49,7 +52,11 @@ function Authorized({ user }) {
       <main>
         <Switch>
           <Route exact path="/">
-            <Library visability={library ? true : false} data={library} nickname={user.nickname} />
+            <Library
+              visability={library ? true : false}
+              data={library}
+              nickname={user.nickname}
+            />
           </Route>
           <Route path="/add-book">
             <AddBook />
@@ -63,7 +70,7 @@ function Authorized({ user }) {
          </Route> */}
         </Switch>
       </main>
-     <Footer />
+      <Footer />
     </div>
   );
 }
