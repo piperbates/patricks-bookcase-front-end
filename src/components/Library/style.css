@@ -1,5 +1,11 @@
-#full-library-table tr:nth-child(odd){
+
+
+#full-library-table tr:nth-child(even), #full-library-table th{
     background: rgb(213, 235, 201);
+}
+
+#full-library-table th {
+    font-weight: bolder;
 }
 
 h1 {
