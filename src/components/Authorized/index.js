@@ -11,16 +11,16 @@ function Authorized({ user }) {
 
   const [library, setLibrary] = useState("");
   const [book, setBook] = useState({});
-
+  const [searchState, setSearchState] = useState("");
   useEffect(() => {
     async function getData() {
-      let res = await fetch("https://patricks-bookshelf.herokuapp.com/");
+      let res = await fetch(`http://localhost:5000/${searchState}`);
       let data = await res.json();
       setLibrary(data.payload);
     }
 
     getData(); //This function sets the data from the api as the library state to be passed around later.
-  }, []);
+  }, [searchState]);
 
   //   // Gets the specific book that was selected from the database
   async function getBookId(bookId) {
@@ -44,6 +44,7 @@ function Authorized({ user }) {
       <HeaderBar
         nickname={user.nickname}
         bookCount={library ? library.length : "..."}
+        changeSearchText={setSearchState}
       />
       <main>
         <Switch>
