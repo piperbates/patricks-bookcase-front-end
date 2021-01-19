@@ -9,11 +9,16 @@ import NotFoundPage from "../NotFoundPage"
 import { backendUrl } from "../../constants";
 
 function Authorized({ user }) {
+  if(!user){
+    user={}
+  }
+
   const ref = useLocation().pathname;
 
   const [library, setLibrary] = useState("");
   const [book, setBook] = useState({});
   const [searchState, setSearchState] = useState("");
+
   useEffect(() => {
     async function getData() {
       let res = await fetch(

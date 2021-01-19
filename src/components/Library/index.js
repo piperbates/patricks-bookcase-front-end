@@ -16,7 +16,7 @@ export default function Library({ visability, data, nickname }) {
     {
       title: "Author",
       dataIndex: "author",
-      key: "author",
+      key: "author",    
     },
     {
       title: "Genre",
