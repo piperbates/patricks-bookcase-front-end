@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LogOutButton from "../LogOutButton";
-
+import AddBookButton from "../AddBookButton"
 import "./style.css";
 import logo from "../../images/logo.png";
 // import {search} from "../../functions/search";
@@ -44,11 +44,7 @@ export default function HeaderBar({ nickname, bookCount, changeSearchText }) {
       </div>
 
       <div className="header-wrapper" id="header-items-right">
-        <div id="add-book-button-box">
-          <Link to="/add-book">
-            <button id="add-book-button">Add New Book</button>
-          </Link>
-        </div>
+        <AddBookButton />
         <div id="search-box">
           <Search
           enterButton="Search"
@@ -62,6 +58,7 @@ export default function HeaderBar({ nickname, bookCount, changeSearchText }) {
             id="search"
           />
         </div>
+        
         <LogOutButton />
       </div>
     </header>

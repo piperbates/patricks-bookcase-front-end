@@ -1,7 +1,14 @@
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
 import { Form, Input, Button, Checkbox, message } from "antd";
 import "./style.css";
+
+
 export default function AddBook() {
+  
+  const { isAuthenticated } = useAuth0();
+
   const [form] = Form.useForm();
   const layout = {
     labelCol: {
@@ -61,7 +68,27 @@ export default function AddBook() {
     console.log({ errorInfo });
   };
 
-  return (
+/* export default function LogOutButton() {
+    const { isAuthenticated } = useAuth0();
+
+    if (!isAuthenticated) {
+        return <></>
+    } else {
+    return (
+    isAuthenticated &&
+    <div id="add-book-button-box">
+          <Link to="/add-book">
+            <button id="add-book-button">Add New Book</button>
+          </Link>
+        </div>)
+}} */
+
+if (!isAuthenticated) {
+    return <p>"You need to be logged in to view this page"</p>
+  } 
+  
+  else {
+    return (
     <div>
       <h1>Add New Book</h1>
       <div id="#add-book-form">
@@ -152,5 +179,5 @@ export default function AddBook() {
         </Form>
       </div>
     </div>
-  );
+  );}
 }

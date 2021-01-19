@@ -1,9 +1,11 @@
 import React from "react";
 import {deleteBook} from "../../functions/deleteBook"
 import { Popconfirm, message } from 'antd';
-import {Redirect} from "react-router-dom"
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 export default function BookById({ book }) {
+const { isAuthenticated } = useAuth0();
  
   function confirmDelete(){
     deleteBook(book.id)
@@ -27,6 +29,8 @@ export default function BookById({ book }) {
 
         <p>{book.genre} | {book.read ? "Read" : "Not read"} | Leant to:  
         {book.leant ? book.leant : " No one"}</p>
+
+        {isAuthenticated ? 
         <p>Edit Book | 
         <Popconfirm
     title={`Are you sure to delete ${book.title}?`}
@@ -37,7 +41,8 @@ export default function BookById({ book }) {
   >
         <button class="red">Delete Book</button>
         </Popconfirm>
-        </p>
+        </p> : <></>
+        }
       </div>
     );
   }
