@@ -1,7 +1,25 @@
-#full-library-table tr:nth-child(odd){
-    background: rgb(213, 235, 201);
+#full-library-table tr:nth-child(even),
+#full-library-table th {
+  background: rgb(213, 235, 201);
+  padding: 10px; margin: 0px;
+}
+
+#full-library-table th {
+  font-weight: bolder;
 }
 
 h1 {
-    padding: 0px; margin: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#full-library-table td:first-child {
+
+    padding: 5px; margin: 0px;
+  width: 300px;
+}
+
+#full-library-table td {
+    padding: 10px; margin: 0px;
+  width: 100px;
 }

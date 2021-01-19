@@ -88,8 +88,15 @@ margin: 0px;
 
 
 #search-box {
-  display: inline;
+  display: block;
 }
+
 #search {
+  height: 40px;
   margin-top: 5px;
 }
+
+#search-box input {
+ 
+}
+

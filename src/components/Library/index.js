@@ -16,7 +16,7 @@ export default function Library({ visability, data, nickname }) {
     {
       title: "Author",
       dataIndex: "author",
-      key: "author",
+      key: "author",    
     },
     {
       title: "Genre",
@@ -47,7 +47,7 @@ export default function Library({ visability, data, nickname }) {
   }
   return (
     <div id="library-box">
-      <h1>Patrick's library</h1>
+      <h1>Patrick's Library</h1>
       <Table
         columns={columns}
         pagination={{ position: ["topRight", "bottomRight"] }}
